@@ -43,7 +43,7 @@ pychain = Blockchain()
 priv1, pub1 = generate_wallet()
 priv2, pub2 = generate_wallet()
 
-    #block 1
+#block 1
 pychain.make_transaction(priv1, pub1, pub2, 50)
 pychain.make_transaction(priv1, pub1, pub2, 50)
 pychain.make_transaction(priv2, pub2, pub1, 76)
@@ -66,7 +66,7 @@ for block in pychain.chain:
     print("Previous hash:",block.previous_hash)
     print("="*20)
 
-print("Is blockchain valid?", pychain.is_chain_valid())
+print("Is blockchain valid?", isValid)
 ```
 Once 5 valid transactions are added, a block is automatically mined and appended to the chain.
 
